@@ -52,7 +52,7 @@ const Footer = () => {
             target="_blank"
           >
             <AiOutlineLink
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-black"
+              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500"
               size={30}
             />
           </a>
