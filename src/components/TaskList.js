@@ -13,12 +13,12 @@ function TaskList() {
       <div className="pb-24">
         <Link
           to="/create-task"
-          className="bg-green-500 px-2 py-1 rounded-md text-5xl text-white cursor-pointer hover:bg-white hover:text-green-500 hover:transition duration-300"
+          className="bg-green-500 px-2 py-1 rounded-md text-3xl md:text-5xl text-white cursor-pointer hover:bg-white hover:text-green-500 hover:transition duration-300"
         >
           Create new task!
         </Link>
       </div>
-      <div className="grid grid-cols-3 gap-4 w-4/6">
+      <div className="grid grid-cols-1 gap-4 w-4/6 md:grid-cols-3">
         {tasks.map((task) => (
           <div
             key={task.id}

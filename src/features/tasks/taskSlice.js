@@ -13,7 +13,7 @@ const initialState = [
       "I need to download new music, I'm really tired of always listening the same tunes.",
   },
   {
-    id: "2",
+    id: "3",
     title: "Take the dog to the vet",
     description: "The dog needs this year's shots.",
   },
