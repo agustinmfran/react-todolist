@@ -25,7 +25,7 @@ function TaskList() {
             className="flex flex-col justify-between bg-neutral-200 p-4 rounded-md shadow-lg"
           >
             <div className="flex justify-between">
-              <h3 className="font-bold">{task.title}</h3>
+              <h3 className="font-bold ">{task.title}</h3>
             </div>
             <p>{task.description}</p>
             <div className="flex gap-x-1">
