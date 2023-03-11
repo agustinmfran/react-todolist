@@ -33,29 +33,32 @@ function TaskForm() {
   }, [params.id, tasks]);
 
   return (
-    <form onSubmit={handleSubmit} className="bg-neutral-400 max-w-sm p-4">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-neutral-400 max-w-sm p-4 rounded-md shadow-lg"
+    >
       <label htmlFor="title" className="block text-sm font-bold mb-1">
         Task:
       </label>
       <input
         name="title"
         type="text"
-        placeholder="title"
+        placeholder="Title"
         onChange={handleChange}
         value={task.title}
-        className="w-full p-2 rounded-md bg-blue-400 mb-2"
+        className="w-full p-2 rounded-md bg-neutral-200 mb-2"
       />
       <label htmlFor="description" className="block text-sm font-bold mb-1">
         Description:
       </label>
       <textarea
         name="description"
-        placeholder="description"
+        placeholder="Description"
         onChange={handleChange}
         value={task.description}
-        className="w-full p-2 rounded-md bg-blue-400 mb-2"
+        className="w-full p-2 rounded-md bg-neutral-200 mb-2"
       />
-      <button className="bg-red-500 px-2 py-1 my-1 rounded-md text-md text-black">
+      <button className="bg-green-500 border border-green-600 px-2 py-1 my-1 rounded-md text-md text-black hover:opacity-50">
         Save
       </button>
     </form>

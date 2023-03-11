@@ -1,8 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
-  { id: "1", title: "Task 1", description: "Description 1", completed: false },
-  { id: "2", title: "Task 2", description: "Description 2", completed: false },
+  {
+    id: "1",
+    title: "Do the laundry",
+    description: "Today I must do the laundry, I don't have clean clothes.",
+  },
+  {
+    id: "2",
+    title: "Download new music",
+    description:
+      "I need to download new music, I'm really tired of always listening the same tunes.",
+  },
+  {
+    id: "2",
+    title: "Take the dog to the vet",
+    description: "The dog needs this year's shots.",
+  },
 ];
 
 export const taskSlice = createSlice({

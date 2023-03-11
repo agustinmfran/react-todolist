@@ -9,27 +9,32 @@ function TaskList() {
     dispatch(deleteTask(id));
   };
   return (
-    <div>
-      <Link
-        to="/create-task"
-        className="bg-green-500 px-2 py-1 rounded-sm text-sm text-white"
-      >
-        Create Task
-      </Link>
-      <div className="grid grid-cols-3 gap-4">
+    <div className="flex flex-col justify-center items-center w-full">
+      <div className="pb-24">
+        <Link
+          to="/create-task"
+          className="bg-green-500 px-2 py-1 rounded-md text-5xl text-white cursor-pointer hover:bg-white hover:text-green-500 hover:transition duration-300"
+        >
+          Create new task!
+        </Link>
+      </div>
+      <div className="grid grid-cols-3 gap-4 w-4/6">
         {tasks.map((task) => (
-          <div key={task.id} className="bg-neutral-200 p-4 rounded-md">
+          <div
+            key={task.id}
+            className="bg-neutral-200 p-4 rounded-md shadow-lg"
+          >
             <div className="flex justify-between">
               <h3 className="font-bold">{task.title}</h3>
               <div className="flex gap-x-1">
                 <Link
                   to={`/edit-task/${task.id}`}
-                  className="bg-zinc-400 px-2 py-1 my-1 rounded-md text-xs text-black"
+                  className="bg-zinc-400 px-2 py-1 my-1 rounded-md text-xs text-black cursor-pointer hover:transition duration-300 hover:opacity-50"
                 >
                   Edit
                 </Link>
                 <button
-                  className="bg-red-500 px-2 py-1 my-1 rounded-md text-xs text-black"
+                  className="bg-red-500 px-2 py-1 my-1 rounded-md text-xs text-black cursor-pointer hover:transition duration-300 hover:opacity-50"
                   onClick={() => handleDelete(task.id)}
                 >
                   Delete
