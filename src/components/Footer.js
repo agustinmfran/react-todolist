@@ -3,6 +3,7 @@ import {
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineMail,
+  AiOutlineLink,
 } from "react-icons/ai";
 
 const Footer = () => {
@@ -41,6 +42,17 @@ const Footer = () => {
           >
             <AiOutlineLinkedin
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 "
+              size={30}
+            />
+          </a>
+
+          <a
+            href="https://www.agustinmfran.com.ar"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineLink
+              className="hover:-translate-y-1 transition-transform cursor-pointer text-black"
               size={30}
             />
           </a>
