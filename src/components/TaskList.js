@@ -9,8 +9,8 @@ function TaskList() {
     dispatch(deleteTask(id));
   };
   return (
-    <div className="flex flex-col justify-center items-center w-full">
-      <div className="pb-24">
+    <div className="flex flex-col justify-center items-center h-full pt-24 md:pt-0 md:h-screen">
+      <div className="pb-12">
         <Link
           to="/create-task"
           className="bg-green-500 px-2 py-1 rounded-md text-3xl md:text-5xl text-white cursor-pointer hover:bg-white hover:text-green-500 hover:transition duration-300"
@@ -22,26 +22,26 @@ function TaskList() {
         {tasks.map((task) => (
           <div
             key={task.id}
-            className="bg-neutral-200 p-4 rounded-md shadow-lg"
+            className="flex flex-col justify-between bg-neutral-200 p-4 rounded-md shadow-lg"
           >
             <div className="flex justify-between">
               <h3 className="font-bold">{task.title}</h3>
-              <div className="flex gap-x-1">
-                <Link
-                  to={`/edit-task/${task.id}`}
-                  className="bg-zinc-400 px-2 py-1 my-1 rounded-md text-xs text-black cursor-pointer hover:transition duration-300 hover:opacity-50"
-                >
-                  Edit
-                </Link>
-                <button
-                  className="bg-red-500 px-2 py-1 my-1 rounded-md text-xs text-black cursor-pointer hover:transition duration-300 hover:opacity-50"
-                  onClick={() => handleDelete(task.id)}
-                >
-                  Delete
-                </button>
-              </div>
             </div>
             <p>{task.description}</p>
+            <div className="flex gap-x-1">
+              <Link
+                to={`/edit-task/${task.id}`}
+                className="bg-zinc-400 px-2 py-1 my-1 rounded-md text-xs text-black cursor-pointer hover:transition duration-300 hover:opacity-50"
+              >
+                Edit
+              </Link>
+              <button
+                className="bg-red-500 px-2 py-1 my-1 rounded-md text-xs text-black cursor-pointer hover:transition duration-300 hover:opacity-50"
+                onClick={() => handleDelete(task.id)}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         ))}
       </div>
